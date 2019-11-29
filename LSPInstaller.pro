@@ -37,7 +37,7 @@ FORMS += \
         widget.ui \
     protocolinfoform.ui
 
-LIBS += -lWs2_32 -lole32 -lkernel32
+LIBS += -lWs2_32 -lole32
 
 QMAKE_LFLAGS += /MANIFESTUAC:"level='requireAdministrator'"
 
