@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1044</width>
+    <height>695</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>LSP Installer</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_Left">
+     <item>
+      <widget class="QLabel" name="label_Catlog">
+       <property name="text">
+        <string>Winsock Catalog</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListWidget" name="listWidget_Catlog">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_Middle">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_ProviderId">
+       <item>
+        <widget class="QLabel" name="label_ProviderId">
+         <property name="text">
+          <string>Your Provider Id:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_ProviderId"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_GenerateProviderId">
+         <property name="text">
+          <string>Generate</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_DllPath">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_DllPath64">
+         <item>
+          <widget class="QLabel" name="label_DllPath64">
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>DLL Path:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_DllPath64">
+           <property name="toolTip">
+            <string>The 64-bit provider should exist in the %SystemRoot%/system32 folder and the 32-bit provider should reside in the %SystemRoot%/syswow64 folder.</string>
+           </property>
+           <property name="text">
+            <string>%SystemRoot%\system32\</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="ProtocolInfoForm" name="tab">
+        <attribute name="title">
+         <string>Protocol 1</string>
+        </attribute>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_Right">
+     <item>
+      <widget class="QPushButton" name="pushButton_RefreshCatlog">
+       <property name="text">
+        <string>Refresh Catlog</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_AddProtocolTab">
+       <property name="text">
+        <string>Add Protocol</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_DelProtocolTab">
+       <property name="text">
+        <string>Del Protocol</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_Install">
+       <property name="toolTip">
+        <string>Install the protocol in current tab.</string>
+       </property>
+       <property name="text">
+        <string>Install Current</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_InstallAll">
+       <property name="toolTip">
+        <string>Install all protocols in tab widget.</string>
+       </property>
+       <property name="text">
+        <string>Install All</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_DeinstallProvider">
+       <property name="toolTip">
+        <string>Deinstall all protocols provided by the specific provider, and protocols depend on it.</string>
+       </property>
+       <property name="text">
+        <string>Deinstall Provider</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_TopAll">
+       <property name="text">
+        <string>Top All</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>ProtocolInfoForm</class>
+   <extends>QWidget</extends>
+   <header>protocolinfoform.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
